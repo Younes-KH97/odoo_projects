@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="cancer_center_patient_view_form" model="ir.ui.view">
+        <field name="name">cancer_center.patient.view.form</field>
+        <field name="model">cancer_center.patient</field>
+        <field name="arch" type="xml">
+        
+            <form string="">
+                <header>
+                    <button string="Commencer un protocol" name="action_open_program_form"  type="object" class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"></field>
+                        <field name="dob"></field>
+                        <field name="phone_number"></field>
+                        <field name="protocol_assignment_ids" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="cancer_center_patient_view_tree" model="ir.ui.view">
+        <field name="name">cancer_center.patient.view.tree</field>
+        <field name="model">cancer_center.patient</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" />
+                <field name="dob" />
+                <field name="phone_number" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="cancer_center_patient_action" model="ir.actions.act_window">
+        <field name="name">patient</field>
+        <field name="res_model">cancer_center.patient</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<templates xml:space="preserve">
+  <t t-name="cancer_center.StatsView">
+    <div class="o_container">
+      <h1>Tableau de bord des cures</h1>
+      <t t-if="state.cure_statistics.length">
+      <div class="row">
+        <div class="col-4">
+          <div class="card dashboard-card">
+            <div class="card-body">
+              <div class="dashboard-title">Cures d’aujourd’hui</div>
+              <div class="dashboard-number" t-esc="state.cure_statistics[0].total_today_cures"/>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card dashboard-card">
+            <div class="card-body">
+              <div class="dashboard-title">Cures de cette semaine</div>
+              <div class="dashboard-number" t-esc="state.cure_statistics[0].total_week_cures"/>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card dashboard-card">
+            <div class="card-body">
+              <div class="dashboard-title">Cures de ce mois</div>
+              <div class="dashboard-number" t-esc="state.cure_statistics[0].total_month_cures"/>
+            </div>
+          </div>
+        </div>
+            <div style="display: flex; justify-content: center; margin: 1rem;">
+              <button     
+                  type="button"
+                  class="btn btn-primary"
+                  style="width: 50%;"
+                  t-on-click="openCureListView">
+                    Load today's cures
+              </button>
+            </div>
+      </div>
+      </t>
+<!-- 
+    <t t-foreach="iteration" t-as="variable">
+        
+    </t> -->
+    <t t-name="cancer_center.Dashboard">
+        <div class="o_dashboard">
+            <h2>📅 Cures d'aujourd'hui</h2>
+            <table class="table table-sm table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Patient</th>
+                        <th>Médicament</th>
+                        <th>Taille (cm)</th>
+                        <th>Poids (kg)</th>
+                        <th>Dosage calculé</th>
+                        <th>Statut</th>
+                        <th>Réactions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="state.today_cures" t-as="cure" t-key="cure.id">
+                        <tr>
+                            <td><t t-esc="cure.patient_id ? cure.patient_id[1] : '—'"/></td>
+                            <td><t t-esc="cure.medication_id ? cure.medication_id[1] : '—'"/></td>
+                            <td><t t-esc="cure.height"/></td>
+                            <td><t t-esc="cure.weight"/></td>
+                            <td><t t-esc="cure.calculated_dose"/></td>
+                            <td><t t-esc="cure.status_label"/></td>
+                            <td><t t-esc="cure.reaction_ids.length"/> réaction(s)</td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+        </div>
+    </t>
+
+    
+
+    </div>
+    <div class="tree-placeholder"></div>
+  </t>
+</templates>

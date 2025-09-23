@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="cancer_center_medication_view_form" model="ir.ui.view">
+        <field name="name">cancer_center.medication.view.form</field>
+        <field name="model">cancer_center.medication</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name"></field>
+                        <field name="posology" class="o_list_text_align_left"></field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="cancer_center_medication_view_tree" model="ir.ui.view">
+        <field name="name">cancer_center.medication.view.tree</field>
+        <field name="model">cancer_center.medication</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="name" />
+                <field name="posology" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="cancer_center_medication_action" model="ir.actions.act_window">
+        <field name="name">medication</field>
+        <field name="res_model">cancer_center.medication</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
