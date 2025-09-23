@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <menuitem id="cancer_center_menu_root" name="Cancer center" action="action_cancer_center_cure_stats">
+    <menuitem id="cancer_center_menu_root" name="Cancer center">
         <menuitem id="patient_menu" name="Patients">
             <menuitem id="patient_menu_action" name="All patients" action="cancer_center_patient_action"/>
         </menuitem>

@@ -2,10 +2,10 @@
 <odoo>
 
     <record id="cancer_center_cure_view_tree" model="ir.ui.view">
-        <field name="name">cancer_center.cure.view.tree</field>
+        <field name="name">cancer_center.cure.view.list</field>
         <field name="model">cancer_center.cure</field>
         <field name="arch" type="xml">
-            <tree editable="bottom">
+            <list editable="bottom">
                 <field name="medication_id" />
                 <field name="weight" />
                 <field name="height" />
@@ -23,15 +23,15 @@
                         icon="fa-exclamation-triangle" 
                         title="Afficher les reactions"
                 />
-            </tree>
+            </list>
         </field>
     </record>
 
     <record id="cancer_center_patient_cure_view_tree" model="ir.ui.view">
-        <field name="name">cancer_center.cure.view.tree</field>
+        <field name="name">cancer_center.cure.view.list</field>
         <field name="model">cancer_center.cure</field>
         <field name="arch" type="xml">
-            <tree editable="bottom">
+            <list editable="bottom">
                 <field name="patient_id" />
                 <field name="medication_id" />
                 <field name="weight" />
@@ -50,14 +50,14 @@
                         icon="fa-exclamation-triangle" 
                         title="Afficher les reactions"
                 />
-            </tree>
+            </list>
         </field>
     </record>
 
     <record id="cancer_center_cure_action" model="ir.actions.act_window">
         <field name="name">Action Name</field>
         <field name="res_model">cancer_center.cure</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="context">{}</field>
     </record>
 

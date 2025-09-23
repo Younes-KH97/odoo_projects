@@ -15,19 +15,19 @@
     </record>
 
     <record id="cancer_center_protocol_view_tree" model="ir.ui.view">
-        <field name="name">cancer_center.protocol.view.tree</field>
+        <field name="name">cancer_center.protocol.view.list</field>
         <field name="model">cancer_center.protocol</field>
         <field name="arch" type="xml">
-            <tree string="">
+            <list string="">
                 <field name="name" />
-            </tree>
+            </list>
         </field>
     </record>
 
     <record id="cancer_center_protocol_action" model="ir.actions.act_window">
         <field name="name">protocol</field>
         <field name="res_model">cancer_center.protocol</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">form,list</field>
     </record>
 
 </odoo>

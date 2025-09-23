@@ -22,21 +22,21 @@
     </record>
 
     <record id="cancer_center_patient_view_tree" model="ir.ui.view">
-        <field name="name">cancer_center.patient.view.tree</field>
+        <field name="name">cancer_center.patient.view.list</field>
         <field name="model">cancer_center.patient</field>
         <field name="arch" type="xml">
-            <tree string="">
+            <list string="">
                 <field name="name" />
                 <field name="dob" />
                 <field name="phone_number" />
-            </tree>
+            </list>
         </field>
     </record>
 
     <record id="cancer_center_patient_action" model="ir.actions.act_window">
         <field name="name">patient</field>
         <field name="res_model">cancer_center.patient</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
 </odoo>
