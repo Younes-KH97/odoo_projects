@@ -35,7 +35,7 @@
                         icon="fa-check" 
                         title="Accept offer"
                         invisible="is_offer_accepted"/>
-               <button 
+                <button 
                         name="refuse_offer"  
                         type="object" 
                         icon="oi-close" 

@@ -221,4 +221,3 @@ class ControllerName(http.Controller):
                 status=500,
                 content_type='application/json'
             )
-
